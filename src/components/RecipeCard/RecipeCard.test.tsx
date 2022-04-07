@@ -57,7 +57,7 @@ describe("Given a RecipeCard component", () => {
       );
 
       const findImg = screen.getByAltText(recipe.name);
-      console.log(findImg);
+
       expect(findImg).toHaveProperty("src", photoURL);
     });
   });
