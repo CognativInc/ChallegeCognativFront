@@ -1,4 +1,6 @@
-const fakeRecommendations = [
+import { Recipe } from "../Interfaces/RecipeInterface";
+
+const fakeRecommendations: Recipe[] = [
   {
     _id: "52944",
     name: "Escovitch Fish",
