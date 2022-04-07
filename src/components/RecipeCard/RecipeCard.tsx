@@ -56,7 +56,7 @@ const RecipeInfo = styled.div`
       color: #666;
     }
 
-    h1 {
+    h2 {
       font-size: 25px;
       font-weight: bold;
       color: #333;
@@ -90,7 +90,7 @@ const RecipeCard = ({
       <RecipeInfo>
         <div>
           <p>{categoryName}</p>
-          <h1>{name}</h1>
+          <h2>{name}</h2>
           <div>
             <p>{duration} minutes</p>
             <p>{complexity}</p>
