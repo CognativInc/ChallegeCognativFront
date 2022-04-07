@@ -19,3 +19,7 @@ const recipeFactory = Factory.define<Recipe>(() => ({
   favorite: faker.datatype.number({ min: 1, max: 99 }),
   complexity: faker.lorem.word(),
 }));
+
+export const generateRandomRecipe = (): Recipe => recipeFactory.build();
+export const generateRandomRecipes = (total: number): Recipe[] =>
+  recipeFactory.buildList(total);
