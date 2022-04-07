@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
+import RecipesCardsList from "../../components/RecipesCardsList/RecipesCardsList";
 import fakeRecipes from "../../data/fakeRecipes";
 import fakeRecommendations from "../../data/fakeRecomendations";
 import "./style.css";
 
 export default function Home() {
-  function renderImage(item) {
-    let imageUrl = "http://via.placeholder.com/640x360";
-    if (item && item.photo) {
-      imageUrl = item.photo;
-    }
-    return <img className="recipe-image" src={imageUrl} />;
-  }
   function renderImageBox(item) {
     let imageUrl = "http://via.placeholder.com/640x360";
     if (item && item.photo) {
@@ -49,27 +43,7 @@ export default function Home() {
           {" "}
           <div className="recipes">
             <h1 className="recipes-title">Top selection</h1>
-            {fakeRecipes.map((item, index) => {
-              return (
-                <div className="recipe">
-                  {renderImage(item)}
-                  <div className="recipe-info">
-                    <div>
-                      <p className="recipe-category">{item.categoryName}</p>
-                      <h1 className="recipe-name">{item.name}</h1>
-                      <div className="recipe-stuff">
-                        <p className="recipe-time">{item.duration} minutes</p>
-                        <p className="recipe-complexity">{item.complexity}</p>
-                        <p className="recipe-people">{item.people} people</p>
-                      </div>
-                    </div>
-                    <Link className="recipe-button" to="/detail" key={index}>
-                      See more
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+            <RecipesCardsList recipesList={fakeRecipes} />
           </div>
         </div>
       </div>
