@@ -60,7 +60,8 @@
       "!src/index.tsx",
       "!src/setupTests.ts",
       "!src/Interfaces/*.ts",
-      "!src/mocks/*.ts"
+      "!src/mocks/*.ts",
+      "!src/data/*.ts"
     ]
   }
 }
