@@ -20,7 +20,7 @@ describe("Given a RecipeCard component", () => {
       expect(findName).toHaveStyle("font-weight: bold");
     });
 
-    test("Then it should show the recipe's infomation", () => {
+    test("Then it should show the recipe's infomation and the photo", () => {
       const recipe = generateRandomRecipe();
 
       render(
@@ -33,11 +33,32 @@ describe("Given a RecipeCard component", () => {
       const findTime = screen.getByText(`${recipe.duration} minutes`);
       const findComplexity = screen.getByText(recipe.complexity);
       const findPeople = screen.getByText(`${recipe.people} people`);
+      const findImg = screen.getByAltText(recipe.name);
 
       expect(findCategory).toBeInTheDocument();
       expect(findTime).toBeInTheDocument();
       expect(findComplexity).toBeInTheDocument();
       expect(findPeople).toBeInTheDocument();
+      expect(findImg).toBeInTheDocument();
+    });
+  });
+
+  describe("When the recipe doesn't have any photo on his props", () => {
+    test("Then it should sohw an image", () => {
+      const recipe = generateRandomRecipe();
+      delete recipe.photo;
+
+      const photoURL = "http://via.placeholder.com/640x360";
+
+      render(
+        <BrowserRouter>
+          <RecipeCard recipe={recipe} />
+        </BrowserRouter>
+      );
+
+      const findImg = screen.getByAltText(recipe.name);
+      console.log(findImg);
+      expect(findImg).toHaveProperty("src", photoURL);
     });
   });
 });
