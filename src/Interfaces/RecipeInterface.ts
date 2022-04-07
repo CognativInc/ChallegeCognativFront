@@ -8,7 +8,7 @@ export interface Recipe {
   people: number;
   ingredients: string;
   description: string;
-  photo: string;
+  photo?: string;
   recommended?: number;
   favorite?: number;
 }
