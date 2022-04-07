@@ -19,5 +19,25 @@ describe("Given a RecipeCard component", () => {
       expect(findName).toBeInTheDocument();
       expect(findName).toHaveStyle("font-weight: bold");
     });
+
+    test("Then it should show the recipe's infomation", () => {
+      const recipe = generateRandomRecipe();
+
+      render(
+        <BrowserRouter>
+          <RecipeCard recipe={recipe} />
+        </BrowserRouter>
+      );
+
+      const findCategory = screen.getByText(recipe.categoryName);
+      const findTime = screen.getByText(`${recipe.duration} minutes`);
+      const findComplexity = screen.getByText(recipe.complexity);
+      const findPeople = screen.getByText(`${recipe.people} people`);
+
+      expect(findCategory).toBeInTheDocument();
+      expect(findTime).toBeInTheDocument();
+      expect(findComplexity).toBeInTheDocument();
+      expect(findPeople).toBeInTheDocument();
+    });
   });
 });
