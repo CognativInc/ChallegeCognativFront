@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import styled from "styled-components";
 
-const RecipeContainer = styled.div`
+const RecipeContainer = styled.li`
   display: flex;
   height: 300px;
   border-radius: 20px;
