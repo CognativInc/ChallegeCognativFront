@@ -14,9 +14,8 @@ export default function Home() {
         </Link>
       </div>
       <div className="page">
-        <div className="container-top">
-          <Recommended recommendedList={fakeRecommendations} />
-        </div>
+        <Recommended recommendedList={fakeRecommendations} />
+
         <div className="container-bottom">
           <div className="recipes">
             <h1 className="recipes-title">Top selection</h1>

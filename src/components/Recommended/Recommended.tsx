@@ -9,22 +9,26 @@ const RecommendedTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
-const RecomendationsContainer = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  height: 200px;
-  align-items: stretch;
+const ContainerTop = styled.div`
+  padding: 20px 100px;
 
-  li {
-    list-style: none;
-  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 200px;
+    align-items: stretch;
 
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+    li {
+      list-style: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
   }
 `;
 
@@ -34,9 +38,9 @@ interface RecommendedProps {
 
 const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
   return (
-    <>
+    <ContainerTop>
       <RecommendedTitle>Recommended</RecommendedTitle>
-      <RecomendationsContainer>
+      <ul>
         {recommendedList.map((recomendation) => (
           <li>
             <Link to="/detail" key={recomendation._id}>
@@ -49,8 +53,8 @@ const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
             </Link>
           </li>
         ))}
-      </RecomendationsContainer>
-    </>
+      </ul>
+    </ContainerTop>
   );
 };
 
