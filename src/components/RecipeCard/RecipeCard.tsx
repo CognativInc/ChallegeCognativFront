@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
+import NavButton from "../NavButton/NavButton";
 
 const RecipeContainer = styled.li`
   display: flex;
@@ -35,22 +36,6 @@ const RecipeInfo = styled.div`
   @media (max-width: 600px) {
     flex-direction: row;
     padding: 10px 15px;
-  }
-
-  a {
-    align-self: flex-end;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-
-    :hover {
-      background-color: #000;
-    }
-
-    :active {
-      transform: scale(0.9);
-    }
   }
 
   & > div {
@@ -90,6 +75,8 @@ interface RecipeCardProps {
 const RecipeCard = ({
   recipe: { name, categoryName, duration, complexity, people, _id, photo },
 }: RecipeCardProps): JSX.Element => {
+  const isMobile = useMediaQuery({ maxWidth: 600 });
+
   return (
     <RecipeContainer>
       <img src={photo ?? "http://via.placeholder.com/640x360"} alt={name} />
@@ -103,9 +90,7 @@ const RecipeCard = ({
             <p>{people} people</p>
           </div>
         </div>
-        <Link className="recipe-button" to="/detail" key={_id}>
-          See more
-        </Link>
+        <NavButton isMobile={isMobile} />
       </RecipeInfo>
     </RecipeContainer>
   );
