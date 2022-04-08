@@ -1,0 +1,35 @@
+import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+import { generateRandomRecipes } from "../../mocks/recipesFactory";
+import Recommended from "./Recommended";
+
+describe("Given a Recommended component", () => {
+  describe("When it's rendered with a list of recommendations", () => {
+    test("Then it should show the recommendations photos", () => {
+      const recommendations = generateRandomRecipes(3);
+      const firstRecommendation = recommendations[0];
+      const secondRecommendation = recommendations[1];
+      const thirdRecommendation = recommendations[2];
+
+      render(
+        <BrowserRouter>
+          <Recommended recommendedList={recommendations} />
+        </BrowserRouter>
+      );
+
+      const findFirstPhoto = screen.getByRole("img", {
+        name: firstRecommendation.name,
+      });
+      const findSecondPhoto = screen.getByRole("img", {
+        name: secondRecommendation.name,
+      });
+      const findThirdPhoto = screen.getByRole("img", {
+        name: thirdRecommendation.name,
+      });
+
+      expect(findFirstPhoto).toBeInTheDocument();
+      expect(findSecondPhoto).toBeInTheDocument();
+      expect(findThirdPhoto).toBeInTheDocument();
+    });
+  });
+});
