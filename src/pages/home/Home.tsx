@@ -14,11 +14,20 @@ const PageContainer = styled.div`
     flex-direction: column;
     padding: 20px 100px;
 
+    @media (max-width: 600px) {
+      padding: 20px 20px;
+    }
+
     & > h2 {
       font-size: 30px;
       font-weight: bold;
       color: #333;
       margin-bottom: 20px;
+
+      @media (max-width: 600px) {
+        margin-left: 30px;
+        font-size: 25px;
+      }
     }
   }
 `;
