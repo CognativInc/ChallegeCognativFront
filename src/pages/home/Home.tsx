@@ -14,6 +14,10 @@ const HeaderContainer = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 const PageContainer = styled.div`
@@ -35,7 +39,7 @@ const PageContainer = styled.div`
   }
 `;
 
-export default function Home() {
+const Home = (): JSX.Element => {
   return (
     <>
       <HeaderContainer>
@@ -52,4 +56,6 @@ export default function Home() {
       </PageContainer>
     </>
   );
-}
+};
+
+export default Home;

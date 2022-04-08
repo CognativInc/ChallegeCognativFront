@@ -18,7 +18,7 @@ const ContainerTop = styled.div`
   padding: 20px 100px;
 
   @media (max-width: 600px) {
-    padding: 20px 10px;
+    padding: 20px 20px;
   }
 
   ul {
@@ -28,11 +28,11 @@ const ContainerTop = styled.div`
     gap: 20px;
     height: 200px;
     align-items: stretch;
-    height: 100%;
 
     @media (max-width: 600px) {
       overflow-x: scroll;
       justify-content: flex-start;
+      height: 100%;
     }
 
     li {
@@ -46,7 +46,7 @@ const ContainerTop = styled.div`
 
       @media (max-width: 600px) {
         width: 300px;
-        height: 250px;
+        height: 200px;
         object-fit: cover;
       }
     }
