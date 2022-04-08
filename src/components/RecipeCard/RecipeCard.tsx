@@ -16,7 +16,7 @@ const RecipeContainer = styled.li`
 `;
 
 const RecipeInfo = styled.div`
-  flex: 1;
+  flex: 1 1;
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
@@ -50,6 +50,7 @@ const RecipeInfo = styled.div`
   }
 
   & > div {
+    padding: 0;
     p {
       font-size: 20px;
       font-weight: bold;
@@ -64,6 +65,7 @@ const RecipeInfo = styled.div`
     }
 
     div {
+      padding: 0;
       display: flex;
       gap: 20px;
       margin-top: 10px;
