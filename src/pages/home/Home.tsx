@@ -4,7 +4,6 @@ import RecipesCardsList from "../../components/RecipesCardsList/RecipesCardsList
 import Recommended from "../../components/Recommended/Recommended";
 import fakeRecipes from "../../data/fakeRecipes";
 import fakeRecommendations from "../../data/fakeRecommendations";
-import "./style.css";
 
 const HeaderContainer = styled.div`
   background-color: #333;
