@@ -7,10 +7,19 @@ const RecommendedTitle = styled.h2`
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
+
+  @media (max-width: 600px) {
+    font-size: 25px;
+    margin-left: 30px;
+  }
 `;
 
 const ContainerTop = styled.div`
   padding: 20px 100px;
+
+  @media (max-width: 600px) {
+    padding: 20px 10px;
+  }
 
   ul {
     display: flex;
@@ -19,6 +28,12 @@ const ContainerTop = styled.div`
     gap: 20px;
     height: 200px;
     align-items: stretch;
+    height: 100%;
+
+    @media (max-width: 600px) {
+      overflow-x: scroll;
+      justify-content: flex-start;
+    }
 
     li {
       list-style: none;
@@ -28,6 +43,12 @@ const ContainerTop = styled.div`
       width: 100%;
       height: 100%;
       border-radius: 20px;
+
+      @media (max-width: 600px) {
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+      }
     }
   }
 `;
