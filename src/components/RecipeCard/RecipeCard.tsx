@@ -10,8 +10,18 @@ const RecipeContainer = styled.li`
   background-color: #fff;
   box-shadow: #bbb 0px 0px 5px;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
   img {
     height: 100%;
+
+    @media (max-width: 600px) {
+      height: 60%;
+      object-fit: cover;
+    }
   }
 `;
 
@@ -22,6 +32,11 @@ const RecipeInfo = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  @media (max-width: 600px) {
+    flex-direction: row;
+    padding: 10px 15px;
+  }
+
   a {
     align-self: flex-end;
     background-color: #333;
@@ -30,21 +45,10 @@ const RecipeInfo = styled.div`
     border-radius: 20px;
 
     :hover {
-      align-self: flex-end;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      background-color: black;
+      background-color: #000;
     }
 
     :active {
-      align-self: flex-end;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      background-color: black;
       transform: scale(0.9);
     }
   }
