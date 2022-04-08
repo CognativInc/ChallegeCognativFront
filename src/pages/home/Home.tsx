@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import RecipesCardsList from "../../components/RecipesCardsList/RecipesCardsList";
 import Recommended from "../../components/Recommended/Recommended";
 import fakeRecipes from "../../data/fakeRecipes";
+import fakeRecommendations from "../../data/fakeRecommendations";
 import "./style.css";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       </div>
       <div className="page">
         <div className="container-top">
-          <Recommended />
+          <Recommended recommendedList={fakeRecommendations} />
         </div>
         <div className="container-bottom">
           <div className="recipes">
