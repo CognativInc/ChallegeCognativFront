@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import fakeRecommendations from "../../data/fakeRecomendations";
+import { Recipe } from "../../Interfaces/RecipeInterface";
 
 const RecommendedTitle = styled.h2`
   font-size: 30px;
@@ -28,12 +28,16 @@ const RecomendationsContainer = styled.ul`
   }
 `;
 
-const Recommended = () => {
+interface RecommendedProps {
+  recommendedList: Recipe[];
+}
+
+const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
   return (
     <>
       <RecommendedTitle>Recommended</RecommendedTitle>
       <RecomendationsContainer>
-        {fakeRecommendations.map((recomendation) => (
+        {recommendedList.map((recomendation) => (
           <li>
             <Link to="/detail" key={recomendation._id}>
               <img
