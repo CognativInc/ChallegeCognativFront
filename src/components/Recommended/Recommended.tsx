@@ -42,8 +42,8 @@ const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
       <RecommendedTitle>Recommended</RecommendedTitle>
       <ul>
         {recommendedList.map((recomendation) => (
-          <li>
-            <Link to="/detail" key={recomendation._id}>
+          <li key={recomendation._id}>
+            <Link to="/detail">
               <img
                 src={
                   recomendation.photo ?? "http://via.placeholder.com/640x360"
