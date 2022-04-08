@@ -19,4 +19,21 @@ describe("Given a Header component", () => {
       expect(findTitle).toBeInTheDocument();
     });
   });
+
+  describe("When the user click on the header title", () => {
+    test("Then it should navigate to '/' path", () => {
+      const title = /food recipes/i;
+
+      render(
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>
+      );
+
+      const findTitle = screen.getByRole("heading", { name: title });
+      userEvent.click(findTitle);
+
+      expect(window.location.pathname).toBe("/");
+    });
+  });
 });
