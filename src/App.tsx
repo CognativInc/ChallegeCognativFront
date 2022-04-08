@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Home from "./pages/HomePage/Home";
+import Home from "./pages/Home/Home";
 import Detail from "./pages/recipe/Detail";
 
 function App() {
