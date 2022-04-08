@@ -46,7 +46,7 @@ const NavButton = ({ isMobile }: NavButtonProps): JSX.Element => {
   return (
     <DetailLink to="/detail">
       {isMobile ? (
-        <Arrow icon={faArrowRight} />
+        <Arrow icon={faArrowRight} title="arrow" />
       ) : (
         <SeeMoreButton className="recipe-button">See more</SeeMoreButton>
       )}
