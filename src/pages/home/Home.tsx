@@ -1,24 +1,8 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import RecipesCardsList from "../../components/RecipesCardsList/RecipesCardsList";
 import Recommended from "../../components/Recommended/Recommended";
 import fakeRecipes from "../../data/fakeRecipes";
 import fakeRecommendations from "../../data/fakeRecommendations";
-
-const HeaderContainer = styled.div`
-  background-color: #333;
-  box-shadow: #333 0px 0px 10px;
-  padding: 0 100px;
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 600px) {
-    justify-content: center;
-  }
-`;
 
 const PageContainer = styled.div`
   background-color: #fafafa;
@@ -42,11 +26,6 @@ const PageContainer = styled.div`
 const Home = (): JSX.Element => {
   return (
     <>
-      <HeaderContainer>
-        <Link to="/">
-          <h1>Food recipes</h1>
-        </Link>
-      </HeaderContainer>
       <PageContainer>
         <Recommended recommendedList={fakeRecommendations} />
         <div>
