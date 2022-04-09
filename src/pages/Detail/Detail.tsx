@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import fakeRecipes from "../../data/fakeRecipes";
 import { Recipe } from "../../Interfaces/RecipeInterface";
-import "./style.css";
 
 const DetailContainer = styled.section`
   background-color: #fafafa;
