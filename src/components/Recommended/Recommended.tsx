@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Recipe } from "../../Interfaces/RecipeInterface";
-
-const RecommendedTitle = styled.h2`
-  font-size: 30px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-
-  @media (max-width: 600px) {
-    font-size: 25px;
-    margin-left: 30px;
-  }
-`;
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 const ContainerTop = styled.div`
   padding: 20px 100px;
@@ -60,7 +49,7 @@ interface RecommendedProps {
 const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
   return (
     <ContainerTop>
-      <RecommendedTitle>Recommended</RecommendedTitle>
+      <SectionTitle text="Recommended" />
       <ul>
         {recommendedList.map((recomendation) => (
           <li key={recomendation._id}>
