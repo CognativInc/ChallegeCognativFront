@@ -14,6 +14,11 @@ const HeaderContainer = styled.div`
   @media (max-width: 600px) {
     justify-content: center;
   }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 `;
 
 const Header = () => {
