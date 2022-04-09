@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/recipe/Detail";
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <>
       <Header />
@@ -13,6 +13,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
