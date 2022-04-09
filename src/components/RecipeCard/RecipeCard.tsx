@@ -1,7 +1,8 @@
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
+
 import NavButton from "../NavButton/NavButton";
+import { useMediaQuery } from "@mui/material";
 
 const RecipeContainer = styled.li`
   display: flex;
@@ -75,7 +76,7 @@ interface RecipeCardProps {
 const RecipeCard = ({
   recipe: { name, categoryName, duration, complexity, people, _id, photo },
 }: RecipeCardProps): JSX.Element => {
-  const isMobile = useMediaQuery({ maxWidth: 600 });
+  const isMobile = useMediaQuery("(min-width:600px)");
 
   return (
     <RecipeContainer>
