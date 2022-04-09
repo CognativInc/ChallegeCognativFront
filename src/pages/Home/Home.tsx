@@ -17,18 +17,6 @@ const PageContainer = styled.div`
     @media (max-width: 600px) {
       padding: 20px 20px;
     }
-
-    & > h2 {
-      font-size: 30px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 20px;
-
-      @media (max-width: 600px) {
-        margin-left: 30px;
-        font-size: 25px;
-      }
-    }
   }
 `;
 
@@ -38,7 +26,6 @@ const Home = (): JSX.Element => {
       <PageContainer>
         <Recommended recommendedList={fakeRecommendations} />
         <div>
-          <h2>Top selection</h2>
           <RecipesCardsList recipesList={fakeRecipes} />
         </div>
       </PageContainer>
