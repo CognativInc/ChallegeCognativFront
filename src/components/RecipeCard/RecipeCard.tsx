@@ -76,7 +76,7 @@ interface RecipeCardProps {
 const RecipeCard = ({
   recipe: { name, categoryName, duration, complexity, people, _id, photo },
 }: RecipeCardProps): JSX.Element => {
-  const isMobile = useMediaQuery("(min-width:600px)");
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
     <RecipeContainer>
