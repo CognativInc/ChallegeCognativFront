@@ -9,7 +9,7 @@ describe("Given a NavButton component", () => {
 
       render(
         <BrowserRouter>
-          <NavButton isMobile={false} />
+          <NavButton isMobile={false} id={""} />
         </BrowserRouter>
       );
 
@@ -25,7 +25,7 @@ describe("Given a NavButton component", () => {
 
       render(
         <BrowserRouter>
-          <NavButton isMobile={true} />
+          <NavButton isMobile={true} id={""} />
         </BrowserRouter>
       );
 
