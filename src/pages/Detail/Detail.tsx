@@ -4,7 +4,7 @@ import fakeRecipes from "../../data/fakeRecipes";
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import "./style.css";
 
-export default function Detail() {
+const Detail = (): JSX.Element => {
   const { id } = useParams();
   const recipe = fakeRecipes.find((recipe: Recipe) => recipe._id === id);
 
@@ -50,4 +50,6 @@ export default function Detail() {
       )}
     </>
   );
-}
+};
+
+export default Detail;
