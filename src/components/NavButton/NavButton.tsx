@@ -40,11 +40,16 @@ const SeeMoreButton = styled.button`
 
 interface NavButtonProps {
   isMobile: boolean;
+  id: string;
 }
 
-const NavButton = ({ isMobile }: NavButtonProps): JSX.Element => {
+const NavButton = ({ isMobile, id }: NavButtonProps): JSX.Element => {
   return (
-    <DetailLink to="/detail">
+    <DetailLink
+      to={{
+        pathname: `/detail/${id}`,
+      }}
+    >
       {isMobile ? (
         <Arrow icon={faArrowRight} title="arrow" />
       ) : (
