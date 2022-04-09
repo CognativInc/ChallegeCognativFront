@@ -91,7 +91,7 @@ const RecipeCard = ({
             <p>{people} people</p>
           </div>
         </div>
-        <NavButton isMobile={isMobile} />
+        <NavButton isMobile={isMobile} id={_id} />
       </RecipeInfo>
     </RecipeContainer>
   );
