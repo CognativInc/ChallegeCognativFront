@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import NavButton from "../NavButton/NavButton";
 import { useMediaQuery } from "@mui/material";
-import { recipeDarkGrey, recipeLightGrey } from "../../styles/variables";
+import { recipeDarkGrey, recipeLightGrey } from "../../styles/colors";
 
 const RecipeContainer = styled.li`
   display: flex;
