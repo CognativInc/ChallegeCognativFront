@@ -19,6 +19,10 @@ const HeaderContainer = styled.div`
     text-decoration: none;
     color: #fff;
   }
+
+  h1 {
+    white-space: nowrap;
+  }
 `;
 
 interface HeaderProps {
