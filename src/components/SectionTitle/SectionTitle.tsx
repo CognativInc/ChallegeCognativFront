@@ -11,7 +11,8 @@ const Title = styled.h2`
   margin-bottom: 20px;
 
   @media (max-width: 600px) {
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
     font-size: 18px;
   }
 `;
