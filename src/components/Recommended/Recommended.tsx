@@ -34,8 +34,8 @@ const ContainerTop = styled.div`
       border-radius: 20px;
 
       @media (max-width: 600px) {
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        height: 150px;
         object-fit: cover;
       }
     }
