@@ -162,37 +162,35 @@ const Detail = (): JSX.Element => {
   return (
     <>
       {recipe ? (
-        <>
-          <DetailContainer>
-            <TopInfoContainer>
-              <img
-                src={recipe.photo ?? "http://via.placeholder.com/640x360"}
-                alt={recipe.name}
-              />
+        <DetailContainer>
+          <TopInfoContainer>
+            <img
+              src={recipe.photo ?? "http://via.placeholder.com/640x360"}
+              alt={recipe.name}
+            />
+            <div>
+              <p>{recipe.categoryName}</p>
+              <h2>{recipe.name}</h2>
               <div>
-                <p>{recipe.categoryName}</p>
-                <h2>{recipe.name}</h2>
+                <p>{recipe.duration} minutes</p>
+                <p>{recipe.complexity}</p>
+                <p>{recipe.people} people</p>
+              </div>
+              <div>
+                <h4>Ingredients</h4>
                 <div>
-                  <p>{recipe.duration} minutes</p>
-                  <p>{recipe.complexity}</p>
-                  <p>{recipe.people} people</p>
-                </div>
-                <div>
-                  <h4>Ingredients</h4>
-                  <div>
-                    {recipe.ingredients.split("\r\n").map((ingredient) => (
-                      <p key={ingredient}>{ingredient}</p>
-                    ))}
-                  </div>
+                  {recipe.ingredients.split("\r\n").map((ingredient) => (
+                    <p key={ingredient}>{ingredient}</p>
+                  ))}
                 </div>
               </div>
-            </TopInfoContainer>
-            <BottomContainer>
-              <h4>Info</h4>
-              <p>{recipe.description}</p>
-            </BottomContainer>
-          </DetailContainer>
-        </>
+            </div>
+          </TopInfoContainer>
+          <BottomContainer>
+            <h4>Info</h4>
+            <p>{recipe.description}</p>
+          </BottomContainer>
+        </DetailContainer>
       ) : (
         <></>
       )}
