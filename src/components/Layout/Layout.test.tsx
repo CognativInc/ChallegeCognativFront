@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Header from "../../components/Header/Header";
+import Layout from "./Layout";
 import userEvent from "@testing-library/user-event";
 
 describe("Given a Header component", () => {
@@ -10,7 +10,7 @@ describe("Given a Header component", () => {
 
       render(
         <BrowserRouter>
-          <Header />
+          <Layout children={""} />
         </BrowserRouter>
       );
 
@@ -26,7 +26,7 @@ describe("Given a Header component", () => {
 
       render(
         <BrowserRouter>
-          <Header />
+          <Layout children={""} />
         </BrowserRouter>
       );
 

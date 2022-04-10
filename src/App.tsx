@@ -1,16 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
+import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/Detail/Detail";
 
 const App = (): JSX.Element => {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+      </Layout>
     </>
   );
 };
