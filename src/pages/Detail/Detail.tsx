@@ -64,6 +64,7 @@ const TopInfoContainer = styled.div`
       @media (max-width: 600px) {
         width: 100%;
         justify-content: space-around;
+        margin-top: 5px;
       }
 
       p {
