@@ -2,6 +2,8 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Detail from "./Detail";
 
+jest.mock("../../data/fakeRecipes");
+
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
   useParams: () => ({ id: "52944" }),
@@ -12,7 +14,7 @@ describe("Given a Detail page", () => {
     test("Then it should render the recipe with the 52944 id", () => {
       const expectedRecipe = {
         _id: "52944",
-        name: "Escovitch Fish",
+        name: "MOCK Escovitch Fish",
         categoryId: "1",
         categoryName: "Fish",
         duration: 11,
