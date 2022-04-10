@@ -12,9 +12,21 @@ const TopInfoContainer = styled.div`
   display: flex;
   padding: 20px 100px;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 0;
+  }
+
   img {
     height: 400px;
     border-radius: 20px;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      border-radius: 0px;
+      height: 200px;
+      object-fit: cover;
+    }
   }
 
   & > div:nth-child(1n) {
@@ -27,6 +39,10 @@ const TopInfoContainer = styled.div`
       font-size: 20px;
       font-weight: bold;
       color: #666;
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
     }
 
     h2 {
@@ -34,6 +50,10 @@ const TopInfoContainer = styled.div`
       font-weight: bold;
       color: #333;
       margin-top: 10px;
+
+      @media (max-width: 600px) {
+        font-size: 18px;
+      }
     }
 
     div:nth-child(3) {
@@ -41,24 +61,61 @@ const TopInfoContainer = styled.div`
       margin-top: 10px;
       gap: 30px;
 
+      @media (max-width: 600px) {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 5px;
+      }
+
       p {
         font-size: 18px;
         color: #666;
+
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
 
     div:nth-child(4) {
       margin-top: 40px;
 
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 15px;
+      }
+
       h4 {
         font-size: 20px;
         color: #333;
         font-weight: bold;
+
+        @media (max-width: 600px) {
+          display: flex;
+          justify-content: center;
+          font-size: 14px;
+        }
       }
 
-      p {
-        margin-top: 10px;
-        text-align: center;
+      div {
+        p {
+          margin-top: 10px;
+          text-align: center;
+
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 600px) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          font-weight: bold;
+          color: #666;
+        }
       }
     }
   }
@@ -67,11 +124,23 @@ const TopInfoContainer = styled.div`
 const BottomContainer = styled.div`
   padding: 20px 100px;
 
+  @media (max-width: 600px) {
+    padding: 20px 20px;
+  }
+
   h4 {
     font-size: 30px;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+
+    @media (max-width: 600px) {
+      display: flex;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
   }
 
   p {
@@ -79,6 +148,10 @@ const BottomContainer = styled.div`
     color: #666;
     line-height: 1.5;
     letter-spacing: 0.2px;
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -106,9 +179,11 @@ const Detail = (): JSX.Element => {
                 </div>
                 <div>
                   <h4>Ingredients</h4>
-                  {recipe.ingredients.split("\r\n").map((ingredient) => (
-                    <p key={ingredient}>{ingredient}</p>
-                  ))}
+                  <div>
+                    {recipe.ingredients.split("\r\n").map((ingredient) => (
+                      <p key={ingredient}>{ingredient}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             </TopInfoContainer>
