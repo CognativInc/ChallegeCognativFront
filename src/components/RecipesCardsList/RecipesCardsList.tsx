@@ -22,7 +22,7 @@ const RecipesCardsList = ({
 }: RecipesCardsListProps): JSX.Element => {
   return (
     <>
-      <SectionTitle text="Top Selection" />
+      <SectionTitle text="Top selection" />
       <RecipesContainer>
         {recipesList.map((recipe) => (
           <RecipeCard recipe={recipe} key={recipe._id} />
