@@ -21,14 +21,21 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const Header = () => {
+interface HeaderProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: HeaderProps): JSX.Element => {
   return (
-    <HeaderContainer>
-      <Link to="/">
-        <h1>Food recipes</h1>
-      </Link>
-    </HeaderContainer>
+    <>
+      <HeaderContainer>
+        <Link to="/">
+          <h1>Food recipes</h1>
+        </Link>
+      </HeaderContainer>
+      {children}
+    </>
   );
 };
 
-export default Header;
+export default Layout;
