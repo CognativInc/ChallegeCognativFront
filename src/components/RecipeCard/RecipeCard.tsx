@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import NavButton from "../NavButton/NavButton";
 import { useMediaQuery } from "@mui/material";
+import { recipeDarkGrey, recipeLightGrey } from "../../styles/variables";
 
 const RecipeContainer = styled.li`
   display: flex;
@@ -45,7 +46,7 @@ const RecipeInfo = styled.div`
     p {
       font-size: 20px;
       font-weight: bold;
-      color: #666;
+      color: ${recipeLightGrey};
 
       @media (max-width: 600px) {
         font-size: 12px;
@@ -55,7 +56,7 @@ const RecipeInfo = styled.div`
     h2 {
       font-size: 25px;
       font-weight: bold;
-      color: #333;
+      color: ${recipeDarkGrey};
       margin-top: 10px;
 
       @media (max-width: 600px) {
@@ -76,7 +77,7 @@ const RecipeInfo = styled.div`
 
       p {
         font-size: 18px;
-        color: #666;
+        color: ${recipeLightGrey};
         font-weight: normal;
 
         @media (max-width: 600px) {

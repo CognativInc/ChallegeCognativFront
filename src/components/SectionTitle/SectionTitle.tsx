@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { recipeDarkGrey } from "../../styles/variables";
 
 interface TitleProps {
   text: string;
@@ -7,7 +8,7 @@ interface TitleProps {
 const Title = styled.h2`
   font-size: 30px;
   font-weight: bold;
-  color: #333;
+  color: ${recipeDarkGrey};
   margin-bottom: 20px;
 
   @media (max-width: 600px) {

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { recipeDarkGrey } from "../../styles/variables";
 
 const HeaderContainer = styled.div`
-  background-color: #333;
-  box-shadow: #333 0px 0px 10px;
+  background-color: ${recipeDarkGrey};
+  box-shadow: ${recipeDarkGrey} 0px 0px 10px;
   padding: 0 100px;
   position: fixed;
   width: 100%;
