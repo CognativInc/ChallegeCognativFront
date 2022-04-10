@@ -7,7 +7,7 @@ const ContainerTop = styled.div`
   padding: 20px 100px;
 
   @media (max-width: 600px) {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 0;
   }
 
   ul {
