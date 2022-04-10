@@ -15,6 +15,7 @@ const RecipeContainer = styled.li`
   @media (max-width: 600px) {
     flex-direction: column;
     border-radius: 10px;
+    height: 200px;
   }
 
   img {
@@ -45,6 +46,10 @@ const RecipeInfo = styled.div`
       font-size: 20px;
       font-weight: bold;
       color: #666;
+
+      @media (max-width: 600px) {
+        font-size: 12px;
+      }
     }
 
     h2 {
@@ -52,6 +57,11 @@ const RecipeInfo = styled.div`
       font-weight: bold;
       color: #333;
       margin-top: 10px;
+
+      @media (max-width: 600px) {
+        font-size: 18px;
+        margin-top: 5px;
+      }
     }
 
     div {
@@ -60,10 +70,18 @@ const RecipeInfo = styled.div`
       gap: 20px;
       margin-top: 10px;
 
+      @media (max-width: 600px) {
+        margin-top: 5px;
+      }
+
       p {
         font-size: 18px;
         color: #666;
         font-weight: normal;
+
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
   }
