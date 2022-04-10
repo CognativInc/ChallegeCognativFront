@@ -97,7 +97,7 @@ const RecipeCard = ({
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <RecipeContainer>
+    <RecipeContainer title="recipe">
       <img src={photo ?? "http://via.placeholder.com/640x360"} alt={name} />
       <RecipeInfo>
         <div>
