@@ -41,7 +41,7 @@ const TopInfoContainer = styled.div`
       color: #666;
 
       @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 
