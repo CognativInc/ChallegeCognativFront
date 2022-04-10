@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import fakeRecipes from "../../data/fakeRecipes";
 import { Recipe } from "../../Interfaces/RecipeInterface";
+import { recipeDarkGrey, recipeLightGrey } from "../../styles/variables";
 
 const DetailContainer = styled.section`
   background-color: #fafafa;
@@ -38,7 +39,7 @@ const TopInfoContainer = styled.div`
     & > p:nth-child(1n) {
       font-size: 20px;
       font-weight: bold;
-      color: #666;
+      color: ${recipeLightGrey};
 
       @media (max-width: 600px) {
         font-size: 14px;
@@ -48,7 +49,7 @@ const TopInfoContainer = styled.div`
     h2 {
       font-size: 25px;
       font-weight: bold;
-      color: #333;
+      color: ${recipeDarkGrey};
       margin-top: 10px;
 
       @media (max-width: 600px) {
@@ -69,7 +70,7 @@ const TopInfoContainer = styled.div`
 
       p {
         font-size: 18px;
-        color: #666;
+        color: ${recipeLightGrey};
 
         @media (max-width: 600px) {
           font-size: 14px;
@@ -88,7 +89,7 @@ const TopInfoContainer = styled.div`
 
       h4 {
         font-size: 20px;
-        color: #333;
+        color: ${recipeDarkGrey};
         font-weight: bold;
 
         @media (max-width: 600px) {
@@ -114,7 +115,7 @@ const TopInfoContainer = styled.div`
           align-items: flex-start;
           width: 100%;
           font-weight: bold;
-          color: #666;
+          color: ${recipeLightGrey};
         }
       }
     }
@@ -131,7 +132,7 @@ const BottomContainer = styled.div`
   h4 {
     font-size: 30px;
     font-weight: bold;
-    color: #333;
+    color: ${recipeDarkGrey};
     margin-bottom: 20px;
 
     @media (max-width: 600px) {
@@ -145,7 +146,7 @@ const BottomContainer = styled.div`
 
   p {
     font-size: 18px;
-    color: #666;
+    color: ${recipeLightGrey};
     line-height: 1.5;
     letter-spacing: 0.2px;
 

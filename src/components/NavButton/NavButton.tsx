@@ -2,10 +2,12 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { recipeDarkGrey } from "../../styles/variables";
 
 const DetailLink = styled(Link)`
   display: flex;
   justify-content: flex-end;
+  text-decoration: none;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -20,7 +22,7 @@ const Arrow = styled(FontAwesomeIcon)`
 
 const SeeMoreButton = styled.button`
   align-self: flex-end;
-  background-color: #333;
+  background-color: ${recipeDarkGrey};
   color: #fff;
   padding: 10px 20px;
   border-radius: 20px;
