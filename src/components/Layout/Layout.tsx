@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { recipeDarkGrey } from "../../styles/variables";
+import { recipeDarkGrey } from "../../styles/colors";
 
 const HeaderContainer = styled.div`
   background-color: ${recipeDarkGrey};

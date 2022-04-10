@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { recipeDarkGrey } from "../../styles/variables";
+import { recipeDarkGrey } from "../../styles/colors";
 
 interface TitleProps {
   text: string;

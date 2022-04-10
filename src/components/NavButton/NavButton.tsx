@@ -2,7 +2,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { recipeDarkGrey } from "../../styles/variables";
+import { recipeDarkGrey } from "../../styles/colors";
 
 const DetailLink = styled(Link)`
   display: flex;
