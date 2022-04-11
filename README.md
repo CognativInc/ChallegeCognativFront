@@ -25,3 +25,11 @@ Use only 1 breakpoint (600px). You can refactor the current style code, but with
     <img src="https://i.ibb.co/Q6T0ybH/homeN.png" alt="Home" title="Home" width="200" height="433" />
     <img src="https://i.ibb.co/cbJWSzG/detailN.png" alt="Details" title="Details" width="200" height="433" />
 </div>
+
+## Start Project
+
+- npm i : When you have cloned the project, run the script to install all the dependencies.
+- npm start : Run this script to start the project in you localhost.
+- npm run coverage : To run all the test and see the coverage percentage.
+- npm run cypres:open : To run all the cypres tests. This script opens a nes browser.
+- npm run build : This scripts performs a local build. Then you can see any typescript error.
