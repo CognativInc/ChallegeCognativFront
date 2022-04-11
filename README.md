@@ -29,7 +29,7 @@ Use only 1 breakpoint (600px). You can refactor the current style code, but with
 ## Start Project
 
 - npm i : When you have cloned the project, run the script to install all the dependencies.
-- npm start : Run this script to start the project in you localhost.
+- npm start : Run this script to start the project in you localhost.git
 - npm run coverage : To run all the test and see the coverage percentage.
 - npm run cypres:open : To run all the cypres tests. This script opens a nes browser.
 - npm run build : This scripts performs a local build. Then you can see any typescript error.

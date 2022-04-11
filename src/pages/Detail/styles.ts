@@ -77,6 +77,7 @@ export const RecipeName = styled.h2`
   font-weight: bold;
   color: ${recipeDarkGrey};
   margin-top: 10px;
+  text-align: center;
 
   @media (max-width: 600px) {
     font-size: 18px;
