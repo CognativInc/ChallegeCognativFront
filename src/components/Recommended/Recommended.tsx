@@ -1,46 +1,7 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import SectionTitle from "../SectionTitle/SectionTitle";
-
-const ContainerTop = styled.div`
-  padding: 20px 100px;
-
-  @media (max-width: 600px) {
-    padding: 20px 0 0 0;
-  }
-
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 200px;
-    align-items: stretch;
-
-    @media (max-width: 600px) {
-      overflow-x: scroll;
-      justify-content: flex-start;
-      height: 100%;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-
-      @media (max-width: 600px) {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-      }
-    }
-  }
-`;
+import { ContainerTop, ListContainer, ListItem } from "./styles";
 
 interface RecommendedProps {
   recommendedList: Recipe[];
@@ -50,9 +11,9 @@ const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
   return (
     <ContainerTop>
       <SectionTitle text="Recommended" />
-      <ul>
+      <ListContainer>
         {recommendedList.map((recomendation) => (
-          <li key={recomendation._id}>
+          <ListItem key={recomendation._id}>
             <Link
               to={{
                 pathname: `/detail/${recomendation._id}`,
@@ -65,9 +26,9 @@ const Recommended = ({ recommendedList }: RecommendedProps): JSX.Element => {
                 alt={recomendation.name}
               />
             </Link>
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </ListContainer>
     </ContainerTop>
   );
 };
