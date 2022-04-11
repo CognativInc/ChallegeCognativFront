@@ -1,17 +1,7 @@
-import styled from "styled-components";
 import { Recipe } from "../../Interfaces/RecipeInterface";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import SectionTitle from "../SectionTitle/SectionTitle";
-
-const RecipesContainer = styled.ul`
-  gap: 10px;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 600px) {
-    gap: 20px;
-  }
-`;
+import { RecipesContainer } from "./styles";
 
 interface RecipesCardsListProps {
   recipesList: Recipe[];

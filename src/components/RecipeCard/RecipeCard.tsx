@@ -1,92 +1,12 @@
 import { Recipe } from "../../Interfaces/RecipeInterface";
-import styled from "styled-components";
-
 import NavButton from "../NavButton/NavButton";
 import { useMediaQuery } from "@mui/material";
-import { recipeDarkGrey, recipeLightGrey } from "../../styles/colors";
-
-const RecipeContainer = styled.li`
-  display: flex;
-  height: 300px;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: #bbb 0px 0px 5px;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    border-radius: 10px;
-    height: 200px;
-  }
-
-  img {
-    height: 100%;
-
-    @media (max-width: 600px) {
-      height: 60%;
-      object-fit: cover;
-    }
-  }
-`;
-
-const RecipeInfo = styled.div`
-  flex: 1 1;
-  padding: 20px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (max-width: 600px) {
-    flex-direction: row;
-    padding: 10px 15px;
-  }
-
-  & > div {
-    padding: 0;
-    p {
-      font-size: 20px;
-      font-weight: bold;
-      color: ${recipeLightGrey};
-
-      @media (max-width: 600px) {
-        font-size: 12px;
-      }
-    }
-
-    h2 {
-      font-size: 25px;
-      font-weight: bold;
-      color: ${recipeDarkGrey};
-      margin-top: 10px;
-
-      @media (max-width: 600px) {
-        font-size: 18px;
-        margin-top: 5px;
-      }
-    }
-
-    div {
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      margin-top: 10px;
-
-      @media (max-width: 600px) {
-        margin-top: 5px;
-      }
-
-      p {
-        font-size: 18px;
-        color: ${recipeLightGrey};
-        font-weight: normal;
-
-        @media (max-width: 600px) {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-`;
+import {
+  RecipeBasicInfo,
+  RecipeContainer,
+  RecipeInfoContainer,
+  RecipeName,
+} from "./styles";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -100,18 +20,18 @@ const RecipeCard = ({
   return (
     <RecipeContainer title="recipe">
       <img src={photo ?? "http://via.placeholder.com/640x360"} alt={name} />
-      <RecipeInfo>
-        <div>
+      <RecipeInfoContainer>
+        <RecipeBasicInfo>
           <p>{categoryName}</p>
-          <h2>{name}</h2>
+          <RecipeName>{name}</RecipeName>
           <div>
             <p>{duration} minutes</p>
             <p>{complexity}</p>
             <p>{people} people</p>
           </div>
-        </div>
+        </RecipeBasicInfo>
         <NavButton isMobile={isMobile} id={_id} />
-      </RecipeInfo>
+      </RecipeInfoContainer>
     </RecipeContainer>
   );
 };
