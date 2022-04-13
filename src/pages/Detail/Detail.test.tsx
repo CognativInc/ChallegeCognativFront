@@ -1,17 +1,18 @@
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import Router, { BrowserRouter } from "react-router-dom";
 import Detail from "./Detail";
 
 jest.mock("../../data/fakeRecipes");
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useParams: () => ({ id: "52944" }),
 }));
 
 describe("Given a Detail page", () => {
   describe("When it's rendered with a 52944 id", () => {
     test("Then it should render the recipe with the 52944 id", () => {
+      Router.useParams = jest.fn().mockReturnValue({ id: "52944" });
+
       const expectedRecipe = {
         _id: "52944",
         name: "MOCK Escovitch Fish",
@@ -46,6 +47,36 @@ describe("Given a Detail page", () => {
       expect(findDuration).toBeInTheDocument();
       expect(findComplexity).toBeInTheDocument();
       expect(findPhoto).toBeInTheDocument();
+    });
+  });
+
+  describe("When it's rendered with a recipe without photo", () => {
+    test("Then it should render a photo with an src = 'http://via.placeholder.com/640x360'", () => {
+      Router.useParams = jest.fn().mockReturnValue({ id: "52943" });
+
+      const expectedSrc = "http://via.placeholder.com/640x360";
+
+      render(
+        <BrowserRouter>
+          <Detail />
+        </BrowserRouter>
+      );
+
+      const findPhoto = screen.getByRole("img");
+
+      expect(findPhoto).toHaveProperty("src", expectedSrc);
+    });
+  });
+
+  describe("When it's rendered with a wrong id", () => {
+    test("Then it should render an empty page", () => {
+      Router.useParams = jest.fn().mockReturnValue({ id: "2345" });
+
+      render(
+        <BrowserRouter>
+          <Detail />
+        </BrowserRouter>
+      );
     });
   });
 });
